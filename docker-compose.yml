@@ -4,3 +4,15 @@ services:
     image: semtech/mu-ruby-template
     volumes:
       - ./echo-server:/app
+    environment:
+      ECHO_FROM_NAME: ping
+    ports:
+      - 8080:80
+  pong:
+    image: semtech/mu-ruby-template
+    volumes:
+      - ./echo-server:/app
+    environment:
+      ECHO_FROM_NAME: pong
+    ports:
+      - 8081:80
