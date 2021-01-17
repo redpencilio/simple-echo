@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  ping:
+    image: semtech/mu-ruby-template
+    volumes:
+      - ./echo-server:/app
